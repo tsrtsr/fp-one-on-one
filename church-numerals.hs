@@ -32,7 +32,7 @@ cmul :: Church a -> Church a -> Church a
 cmul x y = x . y
 
 -- does not compile
---cexp :: Church a -> Church a -> Church a
---cexp x y = y x
+cexp :: Church a -> (Church a -> Church a) -> Church a
+cexp x y = y x
 
 
